@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Student_AssigModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EntityEmployees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="MobileNumber" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="Salary" Type="int" />
+  </EntityType>
+  <EntityType Name="HotelDetails">
+    <Key>
+      <PropertyRef Name="HotelName" />
+    </Key>
+    <Property Name="HotelName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="HotelType" Type="varchar" MaxLength="100" />
+    <Property Name="Price" Type="int" />
+  </EntityType>
+  <EntityType Name="HotelReservations">
+    <Key>
+      <PropertyRef Name="ReservationID" />
+    </Key>
+    <Property Name="ReservationID" Type="int" Nullable="false" />
+    <Property Name="Hotel" Type="varchar" MaxLength="100" />
+    <Property Name="Arrival" Type="date" />
+    <Property Name="Departure" Type="date" />
+    <Property Name="TYPE" Type="varchar" MaxLength="100" />
+    <Property Name="Price" Type="int" />
+    <Property Name="Guests" Type="int" />
+  </EntityType>
+  <EntityContainer Name="Student_AssigModelStoreContainer">
+    <EntitySet Name="EntityEmployees" EntityType="Self.EntityEmployees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HotelDetails" EntityType="Self.HotelDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HotelReservations" EntityType="Self.HotelReservations" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

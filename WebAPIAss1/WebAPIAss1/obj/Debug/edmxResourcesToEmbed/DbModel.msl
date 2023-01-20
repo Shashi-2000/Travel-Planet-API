@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Student_AssigModelStoreContainer" CdmEntityContainer="Student_AssigEntities">
+    <EntitySetMapping Name="EntityEmployees">
+      <EntityTypeMapping TypeName="Student_AssigModel.EntityEmployee">
+        <MappingFragment StoreEntitySet="EntityEmployees">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HotelReservations">
+      <EntityTypeMapping TypeName="Student_AssigModel.HotelReservation">
+        <MappingFragment StoreEntitySet="HotelReservations">
+          <ScalarProperty Name="Guests" ColumnName="Guests" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="Departure" ColumnName="Departure" />
+          <ScalarProperty Name="Arrival" ColumnName="Arrival" />
+          <ScalarProperty Name="Hotel" ColumnName="Hotel" />
+          <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HotelDetails">
+      <EntityTypeMapping TypeName="Student_AssigModel.HotelDetail">
+        <MappingFragment StoreEntitySet="HotelDetails">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="HotelType" ColumnName="HotelType" />
+          <ScalarProperty Name="HotelName" ColumnName="HotelName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
